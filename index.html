@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Nguyen Dac Phuc Portfolio">
+<meta property="og:description" content="Logistics & Supply Chain | Project Management">
+<meta property="og:image" content="https://username.github.io/portfolio/preview.jpg">
+<meta property="og:type" content="website">
+<title>Nguyễn Đắc Phúc Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Inter',sans-serif;background:#f3ece4;color:#2b2b2b;scroll-behavior:smooth;font-size:18px;padding-top:80px} /* tăng font + fix navbar bị che */
+
+
+/* mỗi section 1 màu */
+section:nth-of-type(odd){background:#f3ece4}
+section:nth-of-type(even){background:#ffffff}
+h2{font-family:'Playfair Display';margin-bottom:40px;color:#3e2f25}
+.hero{text-align:center;padding-top:160px; line-height:1.7}
+.hero h1{font-family:'Playfair Display';font-size:60px;color:#3e2f25}
+.hero .small{font-size:30px}
+.hero .bold{font-weight:600;max-width:850px;margin:auto}
+.hero-desc{
+  max-width: 850px;
+  margin: 20px auto 0;
+  text-align: justify;     /* canh đều 2 bên */
+  line-height: 1.7;}
+.hero-desc{
+  text-align: justify;
+  text-justify: inter-word;}
+.button{display:inline-block;margin-top:28px;padding:14px 28px;border-radius:30px;background:#3e2f25;color:#fff;text-decoration:none;font-weight:500;letter-spacing:0.5px;transition:all 0.3s ease;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.button:hover{background:#8b5e3c;transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,0.15)}
+.about{display:flex;gap:60px;align-items:center}
+.about img{width:260px;border-radius:12px}
+.exp-item{margin-bottom:40px;border-bottom:1px solid #ddd;padding-bottom:20px}
+.exp-title{font-weight:600;color:#5a3e2b}
+.company{color:#8b5e3c;margin-bottom:10px}
+details{margin-top:10px}
+summary{cursor:pointer;font-weight:500;color:#3e2f25}
+.projects .project{margin-bottom:30px;border-bottom:1px solid #ddd;padding-bottom:20px}
+.contact{text-align:center}
+.contact h2 span:first-child{color:#8b5e3c}
+.contact h2 span:last-child{color:#3e2f25}
+.contact .btn{display:inline-block;margin:12px;padding:14px 26px;border-radius:30px;background:#fff;border:1px solid #3e2f25;text-decoration:none;color:#3e2f25;font-weight:500;transition:all 0.3s ease}
+.contact .btn:hover{background:#3e2f25;color:#fff;transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,0.15)}
+.contact .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+/* ABOUT */
+.about {
+  display: flex;
+  gap: 30px; /* giảm khoảng cách */
+  align-items: center;
+  max-width: 1000px;
+  margin: auto; /* căn giữa */
+}
+
+  #about {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width:768px){
+  .about{
+    flex-direction:column;
+    text-align:justify;
+  }
+
+  .about-left,
+  .about-text{
+    width:100%;
+  }
+
+  .about-right{
+    width:100%;
+    margin-top:20px;
+  }
+}
+.about-text{
+  flex:1;
+  line-height:1.7;
+  text-align: justify;
+  max-width: 600px;
+}
+.about-right{width:280px}
+.about-right img{width:100%;border-radius:12px;margin-bottom:10px}
+
+  /* ABOUT LAYOUT */
+.about {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+  .about-text{
+  max-width: 600px;
+}
+
+.about-left {
+  flex: 1.2;
+  line-height: 1.7;
+}
+
+.about-right {
+  flex: 1;
+  text-align: center;
+}
+
+.about-right img {
+  width: 260px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* info dưới hình */
+.about-info p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #5a3e2b;
+}
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* EXPERIENCE */
+.exp-item{margin-bottom:50px;border-bottom:1px solid #ddd;padding-bottom:25px}
+.exp-title{font-weight:600;color:#5a3e2b}
+.company{color:#8b5e3c;margin-bottom:10px}
+details{margin-top:10px}
+summary{cursor:pointer;font-weight:500;color:#3e2f25}
+.exp-item ul{margin-top:8px;margin-bottom:16px;padding-left:18px}
+.exp-item > p{line-height:1.7} /* SOW spacing */
+.exp-item li{margin-bottom:6px;line-height:1.7}
+.exp-item p,
+.exp-item li,
+.projects .project p,
+.projects .project li {
+  text-align: justify;
+}
+
+  @media (max-width:768px){
+  .hero-desc p,
+  .about-text p{
+    text-align: justify;
+  }
+}
+
+   @media (max-width:768px){
+  .exp-item p,
+  .projects .project p{
+    text-align: left;
+  }
+}
+.company {
+  font-weight: 600;
+  color: #8b5e3c;
+}
+#experience {
+  max-width: 1000px;
+  margin: auto;}
+
+#experience {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.exp-item {
+  max-width: 850px;
+}
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+  #skills {
+  margin: 30px; 0 auto;
+}
+
+  .skills-grid h3 {
+  margin-bottom: 18px;
+}
+
+.skill-group h4 {
+  font-size: 18px;
+}
+    /* ===== FIX FONT SIZE SKILLS ===== */
+@media (max-width:768px){
+.skill-list li,
+.expertise-list li {
+  font-size: 16px;
+}
+
+/* title trong skills đồng đều */
+.skills-grid h3{
+  font-size: 18px;
+}
+
+.skill-group h4,
+.expertise-group h4{
+  font-size: 16px;
+} }
+
+@media (max-width:768px){
+  .skills-grid{
+    grid-template-columns:1fr 1fr 1fr;
+  }
+}/* push Expertise right */
+.skill-list li,
+.expertise-list li {
+  line-height: 1.7; fontsize: 16px;
+  margin-bottom: 6px;
+}
+
+h4 {
+  margin-top: 18px;
+  margin-bottom: 6px;
+  color: #5a3e2b;
+  font-weight: 600;
+}
+@media (max-width:768px){
+  .skills-grid{
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+  }
+
+  .skills-grid > div{
+    min-width: 280px;
+    flex-shrink: 0;
+  }
+
+  .skills-grid::-webkit-scrollbar{
+    display: none;
+  }
+}
+.expertise-group {
+  margin-bottom: 18px;
+}
+
+  .scroll-hint-btn{
+  display: none;                /* mặc định ẩn */
+  margin: 0 auto 12px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #e6d5c3;
+  color: #3e2f25;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  width: fit-content;
+  pointer-events: none;         /* ❗ không click được */
+  opacity: 0.9;
+}
+
+  /* animation nhẹ */
+.scroll-hint-btn::after{
+  content: "";
+  animation: swipeMove 1.5s infinite;
+}
+
+  .scroll-hint-btn{
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+  
+.scroll-hint-btn{
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+@keyframes swipeMove{
+  0%{margin-left:0}
+  50%{margin-left:6px}
+  100%{margin-left:0}
+}
+
+/* chỉ hiển thị mobile */
+@media (max-width:768px){
+  .scroll-hint-btn{
+    display: block;
+  }
+}
+
+/* PROJECT */
+.projects .project{margin-bottom:40px;border-bottom:1px solid #ddd;padding-bottom:20px}
+.projects .project h3{color:#8b5e3c}
+.projects .project p b{color:#8b5e3c} /* Role, Scope, Problem */
+/* Project spacing chuẩn 1.7 */
+.projects .project p,
+.projects .project li {
+  line-height: 1.7;
+}
+
+.projects .project ul {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  padding-left: 18px;}
+
+  #projects {
+  max-width: 1000px;
+  margin: auto;}
+
+#projects {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.projects .project {
+  max-width: 850px;
+}
+
+  /* Project link button */
+.project-links {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-links a {
+  padding: 10px 16px;
+  border-radius: 20px;
+  background: #3e2f25;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.project-links a:hover {
+  background: #8b5e3c;
+  transform: translateY(-2px);
+}
+
+/* CONTACT */
+.contact{text-align:center}
+.contact h2 span:first-child{color:#8b5e3c}
+.contact h2 span:last-child{color:#3e2f25}
+.contact .btn{display:inline-block;margin:10px;padding:12px 20px;border:1px solid #3e2f25;text-decoration:none;color:#3e2f25}
+.contact .btn:hover{background:#3e2f25;color:#fff}
+.contact {
+  overflow-x: auto; /* cho phép scroll ngang */
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.contact .btn {
+  white-space: nowrap; /* giữ 1 dòng */
+  flex-shrink: 0;      /* không bị co */
+}
+
+/* wrapper để giữ cùng hàng */
+.contact-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: nowrap; /* ❗ không wrap */
+}
+  /* EDU */
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .edu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.edu-item {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.edu-title {
+  font-weight: 600;
+  color: #3e2f25;
+  margin-bottom: 6px;
+}
+
+.edu-school {
+  color: #8b5e3c;
+  margin-bottom: 4px;
+}
+
+.edu-time {
+  font-size: 13px;
+  color: #777;
+}
+  
+/* Skill tag dạng button */
+.skill-tags {
+  margin-top: 10px;
+}
+
+.skill-tags span {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 5px 6px 0 0;
+  background: #e6d5c3;
+  color: #3e2f25;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* hover nhẹ */
+.skill-tags span:hover {
+  background: #8b5e3c;
+  color: #fff;
+  transition: 0.3s;
+}
+
+  /* NAVBAR FIX */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#fff;
+  display:flex;
+  justify-content:center; /* căn giữa thay vì dồn phải */
+  align-items:center;
+  padding:10px 20px;
+  z-index:9999;
+  height:auto;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+nav a{
+  margin:5px 10px;
+  text-decoration:none;
+  color:#3e2f25;
+  font-size:14px;
+  white-space:nowrap; /* tránh bị xuống dòng chữ */
+}
+
+/* MOBILE FIX NAV */
+@media (max-width:768px){
+  nav{justify-content:center;padding:10px}
+  nav a{margin:5px 10px;font-size:13px}
+}
+
+section {
+  padding: 80px 20px;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 16px;
+  }
+}
+
+  nav {
+  display: flex;
+  flex-wrap: wrap; /* cho xuống dòng */
+  justify-content: center;
+  gap: 8px;
+}
+
+nav a {
+  font-size: 13px;
+  padding: 6px 8px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    gap: 4px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+
+  nav {
+    display: flex;
+    flex-wrap: nowrap;        /* ❗ không cho xuống dòng */
+    overflow-x: auto;         /* ❗ nếu dài thì scroll ngang */
+    justify-content: flex-start;
+    gap: 6px;
+    padding: 10px;
+  }
+
+  nav a {
+    flex-shrink: 0;           /* ❗ không bị co */
+    white-space: nowrap;      /* ❗ chữ không xuống dòng */
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  /* ẩn thanh scroll cho đẹp */
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+}
+/* HERO FIX MOBILE TEXT */
+.hero{text-align:center;padding-top:120px}
+.hero h1 {
+  font-size: 56px; /* tăng 2 level */
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.hero .small {
+  font-size: 18px;
+  color: #6b4a36; /* nâu sáng hơn, nổi trên nền */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width:768px){
+  .hero h1{font-size:32px}
+  .hero .small{font-size:14px}
+}
+
+  /* MOBILE ABOUT */
+@media (max-width:768px){
+  .about{flex-direction:column}
+}
+
+/* FIX IMAGE NOT SHOW */
+.about-right img{
+  object-fit:cover;
+
+  /* CONTACT */
+.contact{text-align:center}
+.contact .btn{display:inline-block;margin:10px;padding:12px 20px;border:1px solid #3e2f25;text-decoration:none;color:#3e2f25}
+.contact .btn:hover{background:#3e2f25;color:#fff}
+
+.project-links {
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .project-links {
+    flex-direction: row;
+  }
+}
+
+  body {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+  nav {
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+nav a {
+  font-size: 12px;
+}
+  @media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  p, li {
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero .small {
+    font-size: 13px;
+  }
+}
+
+  .contact-buttons {
+  padding-bottom: 10px;
+}
+
+  .hero-desc{
+  max-width: 800px;
+  margin: 20px auto 0;
+  text-align: center;
+  line-height: 1.8;
+}
+
+  section {
+  max-width: 1100px;
+  margin: auto;
+}
+
+  /* GLOBAL CONTENT ALIGN */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* áp dụng cho tất cả section nội dung */
+#about,
+#experience,
+#projects {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+  h2 {
+  max-width: 900px;
+  margin: 0 0 30px 0;
+}
+
+  .hero-desc{
+  max-width: 850px;
+  margin: 20px auto 0;
+  text-align: center;     /* canh đều 2 bên */
+  line-height: 1.7;
+}
+
+
+
+</style>
+  
+</head>
+<body>
+  
+<nav>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</nav>
+  
+<section class="hero">
+<p class="small">Logistics & Supply Chain | Project Management | Solution Design | Customer Experience</p>
+<h1>Nguyen Dac Phuc</h1>
+<p class="hero-desc"> 9 years of experience in logistics, operations, and supply chain, with strong involvement in cross-functional projects that translate strategic direction into measurable results.
+  Experienced in solution design, project management, stakeholder management, process improvement, execution planning, and business analysis.
+  Passionate about driving operational excellence, improving service quality, and enhancing customer experience through practical and data-driven initiatives.</p>
+<a class="button" href="https://www.linkedin.com/in/dacphuc-nguyen/" target="_blank">Get in Touch</a>
+</section>
+
+<section id="about">
+<h2>ABOUT ME</h2>
+<div class="about">
+<div class="about-text">
+<p>With over 8 years of experience in Supply Chain and Logistics operations, and more than 3 years in project management, I bring a strong end-to-end understanding from execution level to project leadership.<br><br>
+My background allows me to deeply understand operational challenges and translate them into practical solutions, focusing on process optimization, service quality improvement, and customer experience enhancement.<br><br>
+My strengths lie in operations management, logistics, supply chain, customer experience, and solution development, with the ability to identify new opportunities, improve workflows, and support business growth through data-driven initiatives.</p>
+</div>
+<div class="about-right">
+
+<img src="./profile.jpg">
+
+<p>Location 📍: Ho Chi Minh</p>
+<p>Availability 🟢: Open to new opportunities</p>
+</div>
+</div>
+</section>
+
+<section id="experience">
+<h2>EXPERIENCE</h2>
+
+<div class="exp-item">
+<p class="exp-title">Senior Logistics Project Management Associate | Sep 2023 – Feb 2025</p>
+<p class="company">SHOPEE VIETNAM</p>
+<p><b>SOW: </b>Partnered with Operations teams (Customer Service, Product, Risk, Seller Experience), Warehouse, Vendors, and Marketing to lead end-to-end logistics projects from initiation to delivery. Managed logistics KPIs and developed operational solutions to enhance overall business performance.</p>
+<details><summary>View Details</summary>
+<ul>
+<div>
+
+<p><b>Strategic Logistics & Operations (30%)</b></p>
+<ul>
+<li>Led strategic initiatives to optimize service quality and operational efficiency across nationwide logistics operations</li>
+<li>Identified operational gaps through data analysis, testing, and research; translated insights into actionable improvement plans</li>
+<li>Developed capacity planning strategies by analyzing historical run rates to optimize vendor allocation and reduce costs</li>
+</ul>
+
+<p><b>Project Management (30%)</b></p>
+<ul>
+<li>Acted as the primary point of contact for projects across local and regional levels</li>
+<li>Translated business requirements into project plans, SOPs, and frameworks</li>
+<li>Monitored project milestones and escalated risks</li>
+<li>Facilitated cross-functional meetings</li>
+</ul>
+
+<p><b>Operational Performance Management (30%)</b></p>
+<ul>
+<li>Led KPI performance tracking and improvement plans</li>
+<li>Conducted weekly operational reviews</li>
+<li>Led monthly campaign performance reviews (20+ stakeholders)</li>
+<li>Collaborated with vendors on performance optimization</li>
+</ul>
+
+<p><b>Data Intelligence & Dashboard Development (10%)</b></p>
+<ul>
+<li>Developed SOPs, BRDs, and training materials</li>
+<li>Delivered training sessions</li>
+<li>Designed executive dashboards for decision-making</li>
+</ul>
+
+</div>
+</ul>
+</details>
+</div>
+
+<div class="exp-item">
+<p class="exp-title">Senior Project Management | Aug 2022 – Aug 2023</p>
+<p class="company">INBOLD</p>
+<p><b>SOW:</b> Led a team of 2 members and worked closely with production, business teams, and clients to deliver projects aligned with service commitments. Managed end-to-end project execution and proposed process optimization and automation initiatives.</p>
+<details><summary>View Details</summary>
+<ul>
+<div>
+
+<p><b>Project Management (50%)</b></p>
+<ul>
+<li>Managed key client projects, coordinating end-to-end execution across clients, production teams, and internal stakeholders </li>
+<li>Developed project schedules, task allocation plans, and tracking systems to ensure timely delivery and quality standards </li>
+<li>Ensured all deliverables met client requirements and internal quality expectations </li>
+</ul>
+
+<p><b>Client Management (30%)</b></p>
+<ul>
+<li>Gathered and translated client requirements into project scope, proposals, and execution plans </li>
+<li>Organized and led weekly meetings with clients and internal teams to resolve issues and align on strategic initiatives </li>
+<li>Analyzed historical data to generate insights and propose improvement solutions for clients </li>
+</ul>
+
+<p><b>Production & Workflow Control (20%)</b></p>
+<ul>
+<li>Led a team of 2 project members, managing workload allocation and team productivity </li>
+<li>Developed SOPs, workflow documentation, and reporting templates to standardize execution </li>
+<li>Built dashboards to monitor workflow, workload, and project risks </li>
+<li>Supported continuous improvement by analyzing data trends and recommending process enhancements </li>
+</ul>
+
+</div>
+</ul>
+</details>
+</div>
+
+<div class="exp-item">
+<p class="exp-title">Senior Supply Chain Specialist | May 2018 – Aug 2022</p>
+<p class="company">DB SCHENKER</p>
+<p><b>SOW:</b> Managed international supply chain and logistics operations.</p>
+<details><summary>View Details</summary>
+<ul>
+<div>
+
+<p><b>Supply Chain Management (40%)</b></p>
+<ul>
+<li>Managed end-to-end international logistics operations from PO creation to final delivery</li>
+<li>Coordinated with carriers, vendors, customers, and internal teams to ensure smooth shipment execution</li>
+<li>Acted as the primary operational contact for key accounts, handling shipment coordination and performance reviews</li>
+<li>Collaborated with customers on demand planning, forecasting, and budgeting</li>
+</ul>
+
+<p><b>Customer Management & Service Quality (40%)</b></p>
+<ul>
+<li>Maintained strong relationships with international clients, ensuring high service quality and satisfaction</li>
+<li>Handled daily communication, service issues, and escalation management</li>
+<li>Managed SOP alignment and implementation of new processes across stakeholders</li>
+</ul>
+
+<p><b>Process Improvement & Reporting (20%)</b></p>
+<ul>
+<li>Worked with OPEX and IT teams to improve supply chain visibility and operational performance</li>
+<li>Contributed to Power BI dashboards for tracking detention, demurrage, and logistics KPIs</li>
+<li>Led workflow optimization and automation initiatives to reduce manual workload and improve efficiency</li>
+</ul>
+
+</div>
+</ul>
+</details>
+</div>
+
+<div class="exp-item">
+<p class="exp-title">Management Trainee | Feb 2016 – Mar 2018</p>
+<p class="company">KERRY EXPRESS</p>
+<p><b>SOW:</b> logistics operations and analysis, daily handling, process improvement</p>
+<details><summary>View Details</summary>
+<ul>
+<div>
+
+<p><b>Logistics Operations & Analysis (60%)</b></p>
+<ul>
+<li>Conducted research and analysis to support operational improvements and strategic initiatives</li>
+<li>Participated in service station development projects to improve last-mile delivery performance</li>
+<li>Analyzed logistics data to identify improvement opportunities in delivery, warehousing, and transportation cost</li>
+</ul>
+
+<p><b>Daily handling & Process Improvement (40%)</b></p>
+<ul>
+<li>Maintained strong relationships with international clients, ensuring high service quality and satisfaction</li>
+<li>Handled daily communication, service issues, and escalation management</li>
+<li>Managed SOP alignment and implementation of new processes across stakeholders</li>
+</ul>
+
+</div>
+</ul>
+</details>
+</div>
+  
+</section>
+
+<section id="skills">
+<h2>SKILLS AND EXPERTISE</h2>
+
+<div class="scroll-hint-btn">
+  ⇆ Swipe to view more
+</div>
+
+<div class="skills-grid">
+
+  <!-- COLUMN 1: SOFT SKILLS -->
+  <div>
+    <h3>Soft Skills</h3>
+
+    <div class="skill-group">
+      <h4>Teamwork & Collaboration</h4>
+      <ul class="skill-list">
+        <li>Team Leadership</li>
+        <li>Cross-functional Collaboration</li>
+      </ul>
+    </div>
+
+    <div class="skill-group">
+      <h4>Communication</h4>
+      <ul class="skill-list">
+        <li>Stakeholder Management</li>
+        <li>Interpersonal Skills</li>
+        <li>Influencing & Negotiation</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- COLUMN 2: TECHNICAL -->
+  <div>
+    <h3>Technical Skills</h3>
+
+    <div class="skill-group">
+      <h4>Analytics</h4>
+      <ul class="skill-list">
+        <li>Data Processing</li>
+        <li>Descriptive Analytics</li>
+        <li>Basic Machine Learning</li>
+      </ul>
+    </div>
+
+    <div class="skill-group">
+      <h4>Tools</h4>
+      <ul class="skill-list">
+        <li>SQL, Python, Microsoft Office</li>
+        <li>Tableau, Power BI</li>
+        <li>Dashboard Development</li>
+      </ul>
+    </div>
+
+
+  </div>
+
+  <!-- COLUMN 3: EXPERTISE -->
+  <div>
+    <h3>Expertise</h3>
+
+    <div class="expertise-group">
+      <h4>Logistics & Supply Chain</h4>
+      <ul class="expertise-list">
+        <li>Freight Forwarding: Air & Ocen</li>
+        <li>Transportation: Domestic Trucking, Last-mile, Inland services</li>
+        <li>Capacity Planning</li>
+        <li>Warehouse Operations: Inbound, Outbound, Layout Optimization</li>
+      </ul>
+    </div>
+
+    <div class="expertise-group">
+      <h4>Operational Excellence</h4>
+      <ul class="expertise-list">
+        <li>Process Improvement and standardization</li>
+        <li>Workflow Optimization</li>
+        <li>Customer experience and Service Quality</li>
+        <li>Risk and Crisis Management</li>
+        <li>Structured Problem Solving</li>
+      </ul>
+    </div>
+
+    <div class="expertise-group">
+      <h4>Business Analysis & Strategy</h4>
+      <ul class="expertise-list">
+        <li>Project Management</li>
+        <li>Market Segmentation</li>
+        <li>Hypothesis Building</li>
+        <li>Business Intelligence and reporting</li>
+        <li>Experimentation and Tesing</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+</section>
+  
+</section>
+<section id="projects" class="projects">
+<h2>PROJECTS</h2>
+
+<div class="project">
+<h3>SLA 2.0 – Lead Time Optimization & Standardization</h3>
+<p><b>Role: </b>Project Owner / Logistics Lead</p>
+<p><b>Scale: </b>Nationwide</p>
+<p><b>Problem: </b>Lead time analysis across routing and 3PLs showed inconsistencies in SLA performance, with opportunities to shorten delivery time and standardize service levels.</p>
+
+<details><summary>View Details</summary>
+<p><b>Objective: </b> Improve delivery lead time, standardize SLA across 3PLs, and enhance customer experience.</p>
+<p><b>Solution: </b></p>
+<ul>
+<li>Designed and implemented a new SLA framework aligned with actual 3PL capabilities</li>
+<li>Optimized routing allocation based on 3PL performance strengths</li>
+<li>Introduced new KPI and penalty scheme to enforce SLA compliance</li>
+</ul>
+<p><b>Impact:</b> Reduced lead time for 87%+ orders and standardized SLA.</p>
+<ul>
+<li>Reduced lead time for 87%+ of orders</li>
+<li>Standardized SLA across 3PL network, improving service consistency</li>
+<li>Enhanced platform competitiveness through faster delivery</li>
+</ul>
+<p><b>Skills: </b></p>
+<div class="skill-tags">
+<span>Project Management</span>
+<span>Stakeholder Management</span>
+<span>KPI Design</span>
+<span>Process Optimization</span>
+</div>
+  
+</details>
+</div>
+
+<div class="project">
+<h3>ZNS Notification – Failed Delivery Reduction</h3>
+<p><b>Role: </b>Project Lead</p>
+<p><b>Scale: </b>Targeted high-failure delivery rate areas</p>
+<p><b>Problem: </b>Failed delivery (FD) rate exceeded 13% in certain areas, driving high re-delivery cost and impacting customer experience.</p>
+  
+<details><summary>View Details</summary>
+<p><b>Objective: </b> Reduce failed delivery rate and optimize delivery cost through customer behavior insights.</p>
+<p><b>Solution: </b></p>
+<ul>
+<li>Implemented Zalo notification (ZNS) after first failed delivery attempt to confirm customer intent</li>
+<li>Conducted pilot testing (grey-scale rollout) in high-risk areas</li>
+<li>Leveraged customer response data to refine delivery strategy</li>
+</ul>
+<p><b>Impact:</b></p>
+<ul>
+<li>Reduced FD rate from 13% → 7%</li>
+<li>Generated significant cost savings (logistics, manpower, compensation)</li>
+<li>Improved understanding of customer delivery behavior</li>
+</ul>
+<p><b>Skills: </b></p>
+<div class="skill-tags">
+<span>Data Analytics</span>
+<span>Experimentation (A/B Testing)</span>
+<span>Customer Experience</span>
+<span>Cost Optimization</span>
+</div>
+  
+</details>
+</div>
+
+<div class="project">
+<h3>Auto Trigger Lost Threshold – Process Automation</h3>
+<p><b>Role: </b>Project Owner / Logistics Lead</p>
+<p><b>Scale: </b>Nationwide</p>
+<p><b>Problem: </b>Manual tracking of lost-order thresholds caused inefficiency, delays, and risk of missing compensation deadlines.</p>
+  
+<details><summary>View Details</summary>
+<p><b>Objective: </b> Automate monitoring process to reduce manual workload and improve accuracy.</p>
+<p><b>Solution: </b></p>
+<ul>
+<li>Built automated alert system (AutoBot) to notify stakeholders before threshold deadline (D-3)</li>
+<li>Standardized compensation framework with 3PLs to reduce disputes</li>
+</ul>
+<p><b>Impact:</b></p>
+<ul>
+<li>Reduced manual workload by ~90%</li>
+<li>Improved SLA compliance for loss management</li>
+<li>Minimized disputes with 3PLs</li>
+</ul>
+  
+<p><b>Skills: </b></p>
+<div class="skill-tags">
+<span>Process Automation</span>
+<span>Operations Optimization</span>
+<span>Stakeholder Alignment</span>
+</div>
+
+</details>
+</div>
+
+<div class="project">
+<h3>E-Proof Implementation – Dispute Resolution Optimization</h3>
+<p><b>Role: </b>Project Owner / Logistics Lead</p>
+<p><b>Scale: </b>Nationwide</p>
+<p><b>Problem: </b>Lack of electronic proof (E-Proof) created disputes between Shopee and 3PLs and increased manual verification workload.</p>
+  
+<details><summary>View Details</summary>
+<p><b>Objective: </b> Improve dispute resolution efficiency and reduce manual effort</p>
+<p><b>Solution: </b></p>
+<ul>
+<li>Implemented E-Proof system to standardize shipment evidence</li>
+<li>Streamlined dispute handling workflow with 3PLs</li>
+</ul>
+<p><b>Impact:</b></p>
+<ul>
+<li>Reduced manual verification workload</li>
+<li>Improved dispute resolution speed and accuracy</li>
+<li>Reduced CS workload and headcount dependency</li>
+</ul>
+
+<p><b>Skills: </b></p>
+<div class="skill-tags">
+<span>Process Improvement</span>
+<span>Documentation Standardization</span>
+<span>Operations Efficiency</span>
+</div>
+  
+</details>
+</div>
+
+<div class="project">
+<h3>Service Station Optimization – Last Mile Improvement</h3>
+<p><b>Role: </b>Project Owner</p>
+<p><b>Scale: </b>Urban Areas</p>
+<p><b>Problem: </b>Long delivery lead time and inconsistent service quality in urban areas.</p>
+  
+<details><summary>View Details</summary>
+<p><b>Objective: </b> Improve last-mile delivery performance and service quality.</p>
+<p><b>Solution: </b></p>
+<ul>
+<li>Developed new service station model to optimize delivery coverage, speed, and better services for customers</li>
+<li>Proposed new lead time for pickup and delivery</li>
+</ul>
+<p><b>Impact:</b></p>
+<ul>
+<li>Reduced delivery lead time by up to 50%</li>
+<li>Improved service experience (pickup convenience, faster delivery)</li>
+
+
+<p><b>Skills: </b></p>
+<div class="skill-tags">
+<span>Network Optimization,</span>
+<span>Last-Mile Logistics</span>
+<span>Service Improvement</span>
+</div>
+  
+</details>
+</div>
+
+<div class="project">
+<h3>Other Projects</h3>
+
+<p><b>Business Projects:</b> Chat Bot Re-delivery, Dashboard D&D Monitoring, Workforce Dashboard</p>
+
+<p><b>Data Science Projects:</b></p>
+
+<div class="project-links">
+<a href="https://drive.google.com/drive/folders/1ojqWYQ6r4LCN-9Ov95j2t1ZOnc66Dc4a?usp=drive_link" target="_blank">Olist Brazil E-commerce</a>
+
+<a href="https://drive.google.com/drive/folders/1j40MOqDXBFy4Ox4gtMsqsq_DXIyB6Wae?usp=drive_link" target="_blank">Airbnb Thailand</a>
+
+<a href="https://drive.google.com/drive/folders/10acdy2PWMXm0RIBq3wWIPk96LQN-AMdg?usp=drive_link" target="_blank">Career Builder Webscraping</a>
+</div>
+
+</div>
+  
+</div>
+
+</section>
+
+<section id="education">
+<h2>EDUCATION</h2>
+
+<div class="edu-grid">
+
+<div class="edu-item">
+<p class="edu-title">Bachelor of International Business</p>
+<p class="edu-school">Vietnam National University - Univeristy of Economics and Law</p>
+<p class="edu-time">2012 – 2016</p>
+</div>
+
+<div class="edu-item">
+<p class="edu-title">Coder School</p>
+<p class="edu-school">Data Science: Intensive course (20+ hours per week) focusing on fundamentals of Data Analysis</p>
+<p class="edu-time">2023</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+<h2><span>CONNECT</span> <span>ME</span></h2>
+<p>I am open to exploring new opportunities and collaborations. Feel free to reach out via the contacts below.</p>
+<div class="contact-buttons">
+  <a class="btn" href="mailto:dacphucN@gmail.com">📧 dacphucN@gmail.com</a>
+  <a class="btn" href="https://zalo.me/84968060399">📱 (+84)-0 968 060 399</a>
+  <a class="btn" href="https://www.linkedin.com/in/dacphuc-nguyen/">LinkedIn</a>
+</div>
+
+</body>
+</html>
